@@ -1,3 +1,2 @@
-class Wallet:
-    id = None
+#comming soon
     
