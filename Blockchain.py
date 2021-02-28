@@ -1,13 +1,11 @@
 import hashlib
 import json
-from datetime import datetime
 
 
 # class of a block
 class Block:
     prev_Hash = None  # hash of the previous Block in the Blockchain
     nonce = -1
-    timestamp = None
 
     data = None
     current_Hash = None  # hash of the current Block
@@ -63,9 +61,7 @@ class Blockchain:
 
         block.mine(self.difficulty)
         self.current_Hash = block.current_Hash
-
-        block.timestamp = datetime.now()
-        timestamp = str(block.timestamp)
+        
 
         if self.blocks:
             prev_Hash = self.current_Hash
@@ -78,8 +74,7 @@ class Blockchain:
 
             y = {"prevHash": prev_Hash,
                  "nonce": block.nonce,
-                 "data": block.data,
-                 "timestamp": timestamp}
+                 "data": block.data}
 
             temp.append(y)
         self.writeJson(json_data)
