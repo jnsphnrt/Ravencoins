@@ -27,8 +27,7 @@ class Block:
         return "{0}-{1}-{2}-{3}".format(
             self.prev_Hash,
             self.data,
-            self.nonce,
-            self.timestamp
+            self.nonce
         )
 
     def mine(self, difficulty):
