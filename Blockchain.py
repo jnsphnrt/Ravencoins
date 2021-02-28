@@ -52,7 +52,7 @@ class Blockchain:
     current_Hash = ""
 
     # the difficulty describes how many digits of the hash have to be zero
-    # 4 is just for testing, in the real world it should be 6
+    # 4 is just for testing, in the real world it should be higher
     difficulty = 4
 
     # constructor: Just to define the current Hash to append to the Blockchain
