@@ -1,6 +1,4 @@
 import crypto
-# will maybe be important to send coins to someone else 
-from Blockchain import Block, Blockchain
 import json
 
 
@@ -11,6 +9,7 @@ class Wallet:
 
     def __init__(self):
         # generates the private key and the public key
+        # I call it sk for secret key, because pk for private key is obviously a bad name
         self.private_key = crypto.generate_sk()
         self.public_key = crypto.generate_pk(self.private_key)
         
