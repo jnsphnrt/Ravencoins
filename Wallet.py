@@ -1,5 +1,6 @@
 import crypto
 import json
+import Blockchain
 
 
 # Defines a Crypto Wallet
@@ -22,6 +23,6 @@ class Wallet:
             data.append(y)
             json.dump(data)
 
-    # Function to send coins to someone else. Coming soon!
     def send_coins(self, amount, receiver):
-        pass
+        # I know it needs much more than this. This is just provisional.
+        Blockchain.buildBlock(amount)
